@@ -8,6 +8,7 @@ if (CMAKE_COMPILER_IS_GNUCXX)
 endif()
 
 find_package(OpenCV REQUIRED)
+find_package(Lua51 REQUIRED) 
 
 set(FACEDETECTOR_LIBRARY ${PROJECT_NAME})
 set(SOURCE_EXE main.cpp)
@@ -16,6 +17,7 @@ set(FACEDETECTOR_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/include")
 include_directories(${FACEDETECTOR_INCLUDE})
 
 set(LIBRARY_DEPS ${OpenCV_LIBS})
+set(LUA_LIBRARY ${Lua_LIBS})
 
 add_executable(main ${SOURCE_EXE})
 
